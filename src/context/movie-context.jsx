@@ -6,8 +6,6 @@ export default function MovieContextProvider(props) {
   const [popularMovies, setPopularMovies] = useState([]);
   const [genreNames, setGenreNames] = useState([]);
 
-  console.log(popularMovies);
-
   const API_KEY = "0e1faa6879be5de85f3101533144604d";
 
   const API_URL_POPULAR = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
@@ -43,8 +41,6 @@ export default function MovieContextProvider(props) {
     API_KEY,
     genreNames,
   };
-
-  // console.log(popularMovies);
 
   return (
     <MovieContext.Provider value={contextValue}>
